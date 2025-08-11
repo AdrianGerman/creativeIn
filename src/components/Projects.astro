@@ -1,0 +1,57 @@
+---
+const items = Array.from({ length: 3 })
+---
+
+<section id="proyectos" class="mx-auto max-w-7xl px-4 pb-24">
+  <div class="mb-6 flex items-end justify-between">
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+        Proyectos destacados
+      </h2>
+      <p class="mt-2 text-neutral-300">
+        Explora briefs que buscan equipo ahora mismo.
+      </p>
+    </div>
+    <a
+      href="#"
+      class="hidden rounded-xl px-3 py-2 text-sm text-neutral-300 ring-1 ring-white/15 hover:text-white md:inline-block"
+      >Ver todos</a
+    >
+  </div>
+  <div class="grid gap-6 md:grid-cols-3">
+    {
+      items.map((_, i) => (
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <img
+            src={`/projects/p${i + 1}.jpg`}
+            alt="Proyecto"
+            class="mb-4 h-40 w-full rounded-xl object-cover"
+          />
+          <h3 class="line-clamp-1 text-lg font-semibold">
+            Rediseño de landing para SaaS creativo
+          </h3>
+          <p class="mt-1 line-clamp-2 text-sm text-neutral-300">
+            Buscamos UX + Frontend + Motion para lanzar en 3 semanas.
+          </p>
+          <div class="mt-4 flex items-center justify-between text-xs text-neutral-300">
+            <span class="rounded-lg bg-neutral-900/60 px-2 py-1 ring-1 ring-white/10">
+              Remoto
+            </span>
+            <span class="rounded-lg bg-neutral-900/60 px-2 py-1 ring-1 ring-white/10">
+              Pago por hito
+            </span>
+            <span class="rounded-lg bg-neutral-900/60 px-2 py-1 ring-1 ring-white/10">
+              3 colaboradores
+            </span>
+          </div>
+          <a
+            href="#"
+            class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-fuchsia-500 px-4 py-2 text-sm font-semibold text-white hover:bg-fuchsia-400"
+          >
+            Postular
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</section>
